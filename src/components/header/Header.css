@@ -1,0 +1,259 @@
+.header_center {
+  padding: 0 5%;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  left: 0;
+  right: 0;
+}
+
+.header-3links {
+  display: flex;
+}
+
+.header-logo-icon {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.open-sidebar {
+  display: none;
+  color: #333;
+  font-size: 25px;
+}
+
+.header_katalog {
+  padding: 12px 15px;
+  background-color: rgb(255,200,66);
+  color: var(--main-color);
+  border: none;
+  border-radius: 7px;
+  color: black;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.header_logo img{
+  width: 115px;
+  height: 50px;
+
+}
+
+.catalog_wrapper {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  z-index: 100;
+  top: 60px;
+  left: 0;
+  padding: 10px 3% 90px;
+  background-color: #fff;
+}
+
+.catalog_wrapper_item {
+  width: 250px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  padding: 20px 5px;
+  transition: 0.3s;
+  border-radius: 3px;
+}
+
+.catalog_wrapper_item:hover {
+  background-color: #e0e0f6;
+}
+
+.catalog_wrapper_item>svg:first-child {
+  font-size: 23px;
+  margin-right: 8px;
+  color: #444;
+}
+
+.catalog_wrapper_item>p {
+  flex: 1;
+  font-size: 14px;
+  color: #141415;
+  font-family: "Inter", sans-serif;
+}
+
+.catalog_wrapper_item>svg:last-child {
+  color: #666;
+}
+
+.catalog_wrapper_item_section {
+  width: calc(100% - 290px);
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+  padding: 20px;
+}
+
+.catalog_wrapper_item:hover .catalog_wrapper_item_section {
+  display: block;
+}
+
+.catalog_wrapper_item:hover .catalog_wrapper_item_section h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.catalog_wrapper_item_section_links {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 20px;
+}
+
+.catalog_wrapper_item_section_links>div>h4 {
+  color: #333;
+  margin-bottom: 15px;
+  margin-top: 25px;
+  font-family: "Inter", sans-serif;
+}
+
+.catalog_wrapper_item_section_links>div>ul {
+  list-style-type: none;
+}
+
+.catalog_wrapper_item_section_links>div>ul>li {
+  margin: 10px 0;
+  font-family: "Inter", sans-serif;
+}
+
+.catalog_wrapper_item_section_links>div>ul>li>a {
+  text-decoration: none;
+  color: #666;
+  font-family: "Inter", sans-serif;
+}
+
+.catalog_wrapper_item_section_links>div>ul>li>a:hover {
+  color: var(--main-color);
+}
+
+.header_searchbar {
+  position: relative;
+  flex: 1;
+  border: 1px solid rgb(255,200,66);
+  border-radius: 3px;
+  height: 45px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header_searchbar input {
+  text-indent: 10px;
+  flex: 1;
+  padding: 6px 15px;   
+  border: none;
+  border-bottom-left-radius: 12px;
+  outline: none;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+
+
+.header_searchbar>button {
+  padding: 0 15px;
+  height: 100%;
+  border: none;
+  background-color:rgb(255,200,66);
+  font-size: 20px;
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.header_searchbar .searchResult {
+  width: 100%;
+  max-height: 85vh;
+  border-radius: 3px;
+  /* height: 200px; */
+  background-color: #fff;
+  box-shadow: 0 10px 10px #666;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 999;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+}
+
+.header_user {
+  padding: 8px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  gap: 7px;
+  text-decoration: none;
+  background-color: #fff;
+  border: none;
+  color: #333;
+  border-radius: 3px;
+  transition: 0.3s;
+  font-family: "Inter", sans-serif;
+}
+
+.bi:hover{
+color: rgb(255,200,66);
+}
+
+.header_user svg {
+  font-size: 20px;
+}
+
+.header-user-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+  .header_user .header-user-text {
+    display: none;
+  }
+}
+
+@media (max-width: 950px) {
+
+  .header_searchbar,
+  .header_center button:not(.header_user) {
+    display: none;
+  }
+
+  .header_center {
+    justify-content: space-between;
+  }
+
+  .open-sidebar {
+    display: block;
+  }
+}
+
+@media (max-width: 700px) {
+  .header_logo img {
+    width: 190px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header_logo img {
+    width: 130px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+  }
+}

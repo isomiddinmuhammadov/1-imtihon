@@ -1,0 +1,30 @@
+.Myswiper {
+    width: 100%;
+    height: 20vh;
+    z-index: 555;
+    margin-bottom: -3000px  ;
+}
+
+.enter{
+width: 300px;
+height: 100px;
+
+}
+
+
+.mySwiper .carausel_imgs {
+    width: 132px;
+    height:110px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+    flex-direction: column;
+}
+
+.mySwiper .carausel_imgs>img {
+    width: 135px;
+    height: 72px;
+    object-fit: contain;
+}
